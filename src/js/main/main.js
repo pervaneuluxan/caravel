@@ -1,34 +1,64 @@
-class Gulp {
-    constructor(name) {
-        return this.name = name;
-    }
-
-    static gulp = () => {
-
-        return 'GULP';
-    }
-
-}
-
-Gulp.gulp()
-
-
-
-let info = {
-    name: 'Akber',
-    lastName: 'Akhmedzadeh',
-    age: '23'
-}
-
-
-let split = [{ ...info }].map(item => {
-
-    console.log(item)
-
+$('.header__mobilBtn').on('click',function(){
+    $(this).attr('href','javascript:void(0)')
+    $('.nav').slideDown();
+    $('.header__logo svg').addClass('active');
 })
 
-// gulpOptions sperated operator olmadan map olunmuyacaqdi sepereted opereator vasitesiyle biz rahatliqla json objecti map ede bileriy ve yaxudda {gulpOptions} bele
+$('.nav__close').on('click',function(){
+    $('.nav').slideUp();
+    setTimeout(() => {
+        $('.header__logo svg').removeClass('active');
+    }, 300);
+})
 
-// butun jsler babel vasitesiyle convert edilir
+$('.carousel').flickity({
+    prevNextButtons: false,
+    pageDots:false,
+    cellAlign:'left',
+    wrapAround:true,
+    fade:true
+  
+  });
 
-// bu dosya ve bu dosyada yazilan butun jsler test ucundur js dosyasinda olan butun elementleri sile biler ozunuz istedyiniz yeni js fayllarini yarada bilersiniz
+  $('.partners__slider').flickity({
+    prevNextButtons: false,
+    pageDots:false,
+    cellAlign:'left',
+    wrapAround:true,
+    autoPlay:3000,
+  });
+
+
+  $('.count').counterUp({
+    delay: 5,
+    time: 1000
+});
+$('.select-drpdwn').niceSelect();
+
+
+$(function(){
+  $(window).on('scroll',function(){
+
+
+    if($(window).scrollTop() >100){
+      $('.header').addClass('sticky')
+    }
+    else{
+      $('.header').removeClass('sticky')
+    }
+  })
+})
+
+window.addEventListener('load', AOS.refresh)
+$(function () {
+AOS.init({
+once: true,
+});
+});
+
+$('#file').change(function () {
+  var i = $(this).prev('label').clone();
+  var file = $('#file')[0].files[0].name;
+
+  $('#file-upload').attr('placeholder', file);
+});

@@ -1,0 +1,12 @@
+.parallax{
+    height: 40rem;
+    background-image: url('../../img/parallax-1-banner.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    &-about{
+        background-image: url('../../img/parallax-2.png');
+    }
+}

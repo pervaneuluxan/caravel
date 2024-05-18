@@ -1,0 +1,66 @@
+.getInTouch{
+    padding: 4rem 0;
+
+    .row{
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    .col-lg-6:first-child{
+        @include respondmax(lg){
+            order: 2;
+        }
+    }
+
+    &__left{
+        padding-right: 6rem;
+
+        @include respondmax(lg){
+            padding-right: 0;
+            margin-top: 3.2rem;
+        }
+    }
+
+    &__left{
+        span:not(.subheading){
+            @include font($onsm,1.6rem,rgba(0, 0, 0, 0.4),150%);
+            display: inline-block;
+
+            a{
+                color: $secondary-color;
+            }
+        }
+    }
+
+    form{
+        margin-top: 4.6rem;
+    }
+
+    &__right{
+        position: relative;
+        display: flex;
+        height: 100%;
+    }
+
+    &__img{
+        width: 100%;
+        object-fit: cover;
+        height: 100%;
+
+        @include respondmax(sm){
+           height: 36rem;
+        }
+        
+    }
+
+    &__vector{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+
+        @include respondmax(lg){
+            width: 60%;
+            object-fit: cover;
+        }
+    }
+}

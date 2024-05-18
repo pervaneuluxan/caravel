@@ -1,0 +1,13 @@
+.career-detail{
+    .vacancies{
+        background-image: url('../../img/caravel-bcg.png');
+    background-position: top right;
+    background-repeat: no-repeat;
+    padding-bottom: 10rem;
+
+    @include respondmax(lg){
+        background-image: unset;
+        padding-bottom: 4rem;
+    }
+    }
+}

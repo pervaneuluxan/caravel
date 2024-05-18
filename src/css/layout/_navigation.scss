@@ -1,0 +1,89 @@
+.nav{
+
+    @include respondmax(lg){
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: $primary-color;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        padding: 4.5rem 1.6rem;
+        display: none;
+        z-index: 19;
+    }
+
+    &-list{
+        padding-left: 0;
+        list-style: none;
+        margin-bottom: 0;
+
+        @include respondmax(lg){
+            padding-top: 6.7rem;
+        }
+    }
+
+    &-item{
+        display: inline-block;
+        
+        &:not(:last-child){
+            margin-right: 2.2rem;
+
+            @include respondmax(lg){
+                margin-right: 0;
+                margin-bottom: 2.7rem;
+            }
+        }
+
+        @include respondmax(lg){
+            display: block;
+
+        }
+    }
+
+    &-link{
+        display: inline-block;
+        @include font($on,1.4rem,#fff,150%);
+        text-transform: uppercase;
+        transition: all .2s ease-in-out;
+
+        &:hover{
+            color: $secondary-color;
+        }
+
+        @include respondmax(lg){
+            @include font($onsm,1.6rem,#fff,150%);
+            color: #fff!important;
+
+
+        }
+    }
+
+    &__close{
+        display: none;
+
+        @include respondmax(lg){
+            display: block;
+        }
+    }
+
+    &__logo{
+        position: absolute;
+        bottom: 7.2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        object-fit: cover;
+        display: none;
+
+    @include respondmax(lg){
+        display: block;
+    }
+    }
+}
+
+.header-home{
+    .nav-link{
+        color: #1e1e1e;
+    }
+}

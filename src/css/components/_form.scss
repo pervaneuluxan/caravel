@@ -1,0 +1,86 @@
+
+.form{
+
+    &-group{
+        margin-bottom: 1.8rem;
+
+    }
+    &-control{
+        background: #F9F9F9;
+        border-radius: 4px;
+        border: unset;    
+        outline: none;
+        height: auto;
+        padding: 1.4rem 1.6rem;
+        @include font($on,1.4rem,rgba(0, 0, 0, 0.5),150%);
+        width: 100%;
+
+        &-file{
+            display: flex;
+            justify-content: space-between;
+
+            .fileName-input{
+                border: unset;
+                background-color: transparent;
+                outline: none;
+            }
+            .file-input{
+                display: none;
+                position: absolute;
+            }
+        }
+
+        &:focus{
+            box-shadow: unset;
+            background-color: #F9F9F9;
+        }
+        &::placeholder{
+            @include font($on,1.4rem,rgba(0, 0, 0, 0.5),150%);
+        }
+    }
+}
+form{
+
+    label{
+        @include font($onm,1.4rem,#1E1E1E,150%);
+        margin-bottom: 1.2rem;
+    }
+
+    textarea{
+        height: 12.1rem;
+        resize: none;
+    }
+    .button{
+        width: 100%;
+        text-align: center;
+        margin-top: 2.2rem;
+    }
+}
+
+.iti{
+    width: 100%;
+    display: block;
+
+   
+
+    &__arrow{
+        border-top-color: rgba(0, 0, 0, 0.5);
+    }
+}
+.iti--separate-dial-code .iti__selected-flag{
+    background-color: #F9F9F9;
+}
+.iti__selected-dial-code{
+    @include font($on,1.4rem,rgba(0, 0, 0, 0.5),150%);
+
+}
+.iti__selected-flag .iti__flag{
+    display: none;
+}
+.nice-select{
+    margin-bottom: 1.8rem;
+
+    & .list{
+        width: 100%;
+    }
+}

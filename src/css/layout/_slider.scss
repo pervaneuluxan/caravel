@@ -1,0 +1,38 @@
+.slider{
+    height: 55.5rem;
+    position: relative;
+
+    @include respondmax(lg){
+        padding-top: 5.5rem;
+    }
+
+    &-imgWeb{
+
+        @include respondmax(sm){
+            display: none;
+        }
+    }
+    &-imgMob{
+
+        display: none;
+
+        @include respondmax(sm){
+            display: block;
+        }
+    }
+
+    .carousel{
+        width: 100%;
+        height: 100%;
+
+        &__cell{
+            width: 100%;
+            height: 100%;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+}

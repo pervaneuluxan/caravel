@@ -1,3 +1,50 @@
-.azn {
-	font-family: $aznb;
+.subheading{
+    @include font($onsm,1.4rem,$secondary-color,150%);
+    text-transform: uppercase;
+    margin-bottom: .8rem;
+    display: block;
+
+    @include respondmax(lg){
+        text-align: center;
+    }
+
 }
+
+.section-title{
+    @include font($onm,3.6rem,$primary-color,150%);
+    letter-spacing: -0.04em;
+    margin-bottom: .8rem;
+
+    @include respondmax(lg){
+        font-size: 2.8rem;
+        text-align: center;
+    }
+
+    span{
+        color: $secondary-color;
+    }
+
+    &.light{
+        color: #fff
+    }
+}
+
+p{
+    @include font($on,1.6rem,rgba(0, 0, 0, 0.6),150%);
+
+    @include respondmax(lg){
+        text-align: center;
+    }
+}
+
+.body-text{
+    text-align: center;
+}
+
+.mob-left{
+
+    @include respondmax(lg){
+        text-align: left;
+    }
+}
+

@@ -1,0 +1,78 @@
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="libs/jquery/dist/jquery.min.js"><\/script>')</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="libs/bootstrap/dist/js/bootstrap.min.js" type="text/javascript" charset="utf-8" async defer></script>
+<script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+<script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
+<script src="libs/intelInput/intlTelInput.js"></script>
+<script src="libs/nice-select/js/jquery.nice-select.js"></script>
+<script src="libs/nice-select/js/jquery.nice-select.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery.counterup@2.1.0/jquery.counterup.min.js"></script>
+
+<script src="js/all.min.js"></script>
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+<script>
+  window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+  ga('create','UA-XXXXX-Y','auto');ga('send','pageview')
+</script>
+<script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+
+<script>
+  var input=document.querySelector('#phone');
+    var iti=window.intlTelInput(input,{
+        utilsScript:'js/main/utils.js',
+        initialCountry:'az',
+        // nationalMode:'true',
+        separateDialCode:'false'
+       
+    })
+</script>
+<script>
+  function initMap(){
+  const map_selector=document.getElementById('map');
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: 41.08542268398697, lng: 28.774596556789998},
+    zoom: 8,
+    rotateControl: false,
+    fullscreenControl: false,
+    zoomControl: false
+  });
+
+
+  const marker=new google.maps.Marker({
+    position:{lat:40.70221655273088, lng: 31.1249302489001},
+    map,
+    icon:{
+    url: map_selector.getAttribute("data-icon"),
+    scaledSize: new google.maps.Size(50, 60), // scaled size
+    origin: new google.maps.Point(0, 0), // origin
+    anchor: new google.maps.Point(0, 0) // anchor
+  }
+
+     
+  });
+  const infowindow = new google.maps.InfoWindow({
+    content:"<div><div style='float:left'><img src='./img/map-info-img.png'></div> <div><p style='margin-left:2rem;text-align:left;font-size:1.2rem;margin-bottom:0'>Caravel Trading </br> Volutpat enim quisque eget arcu libero leo lacus. Porttitor mi leo id sodales.</p></div></div>",
+  });
+
+  marker.addListener("click", () => {
+    infowindow.open({
+      anchor: marker,
+      map,
+      shouldFocus: false,
+    });
+  });
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDMw1_s-z-J1PUnlTTlMIvNn2xJfCsYeXc&map_&callback=initMap&language=en"></script>
+
+</body>
+</html>

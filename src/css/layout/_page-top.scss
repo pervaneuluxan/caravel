@@ -1,0 +1,48 @@
+.page-top{
+    height: 42.9rem;
+    background-size: cover;
+    padding-top: 21rem;
+
+    @include respondmax(lg){
+        height: auto;
+        padding-top: 16rem;
+    }
+
+    &--contact{
+        background-image: url('../../img/contact-pagetop.png');
+    }
+
+    &--about{
+        background-image: url('../../img/page-top-about.png');
+    }
+    
+    &--career{
+        background-image: url('../../img/page-top-career.png');
+    }
+    &--services{
+        background-image: url('../../img/page-top-services.png');
+
+    }
+    &--service-detail{
+        background-image: url('../../img/page-top-service-detail.png');
+
+    }
+
+    h1{
+        @include font($onsm,4.8rem,#fff,150%);
+        letter-spacing: -0.04em;
+
+        @include respondmax(lg){
+            font-size: 3.8rem;
+            line-height: 4.6rem;
+        }
+    
+    }
+    p{
+        color: #fff;
+
+        @include respondmax(lg){
+            text-align: left;
+        }
+    }
+}

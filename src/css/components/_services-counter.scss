@@ -1,0 +1,43 @@
+.services-counter{
+
+    .box{
+        display: flex;
+        justify-content: space-between;
+        padding: 0;
+
+        @include respondmax(lg){
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+        }
+
+        p{
+            width: 52%;
+            padding: 3.2rem 6.4rem;
+            padding-right: 0;
+
+            @include respondmax(lg){
+                width: 100%;
+                padding: 2rem;
+            }
+        }
+
+        .counterBox{
+            width: 50%;
+            margin-top: 0;
+            margin-left: 7rem;
+            background-image: url('../../img/counterBox-bcg.png');
+            background-size: cover;
+            background-repeat: no-repeat;
+            padding: 3.2rem 6.4rem;
+            padding-left: 0;
+
+            @include respondmax(lg){
+                width: 100%;
+                padding: 2rem;
+                margin-left: 0;
+            }
+           
+        }
+    }
+}

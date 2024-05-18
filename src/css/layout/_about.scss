@@ -1,0 +1,74 @@
+.about{
+    padding: 8rem 0;
+    background-image: url('../../img/about-bcg.png');
+    background-size: 40% 90%0;
+    background-repeat: no-repeat;
+    background-position: top left;
+
+    @include respondmax(lg){
+        background-image: unset;
+        padding: 4rem 0;
+    }
+
+    &-container{
+
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        @include respondmax(sm){
+            width: 1160px;
+            overflow-x: hidden;
+        }
+    }
+
+    .row{
+        align-items: center;
+    }
+
+    .col-lg-6:first-child{
+      
+        
+        @include respondmax(lg){
+            order: 2;
+        }
+    }
+    &__right{
+        padding-left: 4rem;
+
+        @include respondmax(lg){
+            padding-left: 0;
+            margin-bottom: 3.2rem;
+        }
+    }
+
+    .box{
+        width: 47%;
+        margin-bottom: 2.4rem;
+
+        @include respondmax(sm){
+            width: 28.2rem;
+        }
+
+        &:not(:nth-child(2n)){
+            margin-right: 2.4rem;
+
+            @include respondmax(sm){
+                margin-right: .8rem;
+            }
+        }
+
+
+    }
+}
+
+.swipe-box {
+    width: 100%;
+    position: relative;
+
+    @include respondmax(sm){
+        overflow-x: scroll;
+        padding-bottom: -5rem;
+    }
+}

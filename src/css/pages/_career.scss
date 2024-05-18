@@ -1,0 +1,64 @@
+.vacancies{
+    padding: 4rem 0;
+
+    .col-lg-12{
+        margin-bottom: 4rem;
+    }
+    .col-lg-6{
+        margin-bottom: 2.4rem;
+    }
+
+    .button{
+        color: $primary-color;
+        width: 20rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2rem;
+    }
+}
+
+.career-page{
+
+    .image-textBlock--firstImage{
+        background-image: url(../../img/image-text=bcg.png);
+        background-position: right top -100%;
+        padding-bottom: 20rem;
+        background-repeat: no-repeat;
+    
+
+        @include respondmax(lg){
+            background-image: unset;
+            padding-bottom: 4rem;
+        }
+    }
+
+    .imgBlock{
+        margin-top: -7rem;
+    }
+   
+}
+
+.career-form{
+    padding: 4rem 0;
+
+    .col-lg-12{
+        padding: 0 12rem!important;
+
+        @include respondmax(xl){
+            padding: 0 2rem!important;
+        }
+
+        &:first-child{
+            margin-bottom: 5rem;
+        }
+    }
+    span:not(.subheading){
+        @include font($onsm,1.6rem,rgba(0, 0, 0, 0.4),150%);
+        display: inline-block;
+
+        a{
+            color: $secondary-color;
+        }
+    }
+    
+}

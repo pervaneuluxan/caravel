@@ -1,0 +1,20 @@
+.counterBox{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 6.4rem;
+
+    span{
+        @include font($onb,3.8rem,$secondary-color,150%);
+        text-transform: uppercase;
+
+        .count{
+            color: $primary-color;
+        }
+    }
+
+    h6{
+        @include font($onm,1.6rem,$secondary-color,150%);
+
+    }
+}

@@ -1,0 +1,45 @@
+.imgBlock{
+    margin: 7rem 0;
+    height: 40rem;
+    height: 40rem;
+    background-image: url('../../img/img-block-box.png');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 5.9rem 0;
+
+    @include respondmax(lg){
+        height: auto;
+    }
+
+    .col-lg-12{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .section-title,p{
+        color: #fff;
+        text-align: center;
+        max-width: 70%;
+        margin-bottom: 1.6rem;
+
+        @include respondmax(lg){
+            max-width: 100%;
+        }
+    }
+
+    .section-title{
+        max-width: 40%;
+
+        @include respondmax(lg){
+            max-width: 100%;
+        }
+    }
+
+    .button{
+        padding: 1.6rem 4rem;
+    }
+
+}

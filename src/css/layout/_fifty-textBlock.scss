@@ -1,0 +1,35 @@
+.fifty-textBlock{
+    padding: 8rem 0;
+
+    @include respondmax(lg){
+        padding: 2rem 0;
+    }
+
+
+    h2{
+        @include font($onsm,4.8rem,$primary-color,150%);
+        letter-spacing: -4%;
+
+
+        @include respondmax(lg){
+            font-size: 3.2rem;
+            text-align: center;
+        }
+
+        span{
+            color: $secondary-color;
+        }
+    }
+
+    p{
+        @include font($on,1.6rem,rgba(0, 0, 0, 0.6),150%);
+        padding-left: 4rem;
+
+
+        @include respondmax(lg){
+            padding-left: 0;
+            text-align: center;
+            margin-top: 1.6rem;
+        }
+    }
+}

@@ -1,0 +1,47 @@
+.services{
+
+    padding: 6rem 0;
+
+    background-image: url('../../img/caravel-bcg.png');
+    background-position: top right;
+    background-repeat: no-repeat;
+
+    @include respondmax(lg){
+        background-image: unset;
+    }
+
+    .col-lg-12{
+        padding-bottom: 4.6rem;
+    }
+
+    .col-lg-3,
+    .col-lg-4{
+        padding-left: 1.2rem!important;
+        padding-right: 1.2rem!important;
+
+        @include respondmax(lg){
+            padding-left: 2rem!important;
+            padding-right: 2rem!important;
+        }
+    }
+    .col-lg-3{
+        margin-bottom: 2.4rem;
+        @include respondmax(lg){
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    .col-lg-4{
+
+        @include respondmax(lg){
+            margin-bottom: 1.2rem;
+        }
+    }
+
+    & .section-title{
+        text-align: center;
+    }
+    & .subheading{
+        text-align: center;
+    }
+}

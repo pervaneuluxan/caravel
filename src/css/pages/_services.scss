@@ -1,0 +1,15 @@
+.service-top{
+    padding-top: 2rem;
+    padding-bottom: 4rem;
+    background-image: url('../../img/service-top-bcg.png');
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+.services-counter{
+    padding: 4rem 0;
+
+    @include respondmax(lg){
+        padding-top: 0;
+    }
+}

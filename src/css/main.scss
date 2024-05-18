@@ -10,12 +10,32 @@
 @import "base/fonts";
 
 @import "components/button"; 
+@import "components/box";
+@import "components/counterBox";
+@import "components/form";
+@import "components/career-item";
+@import "components/services-counter";
 
 @import "layout/footer";
 @import "layout/header";
 @import "layout/navigation";
+@import "layout/fifty-textBlock";
+@import "layout/slider";
+@import "layout/partners";
+@import "layout/about";
+@import "layout/parallax";
+@import "layout/services";
+@import "layout/career";
+@import "layout/getInTouch";
+@import "layout/page-top";
+@import "layout/map-section";
+@import "layout/img-textBlock";
+@import "layout/imgBlock";
 
 @import "pages/contact";
+@import "pages/career";
+@import "pages/services";
+@import "pages/career-detail";
 
 
 

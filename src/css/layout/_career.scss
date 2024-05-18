@@ -1,0 +1,51 @@
+.career{
+    padding: 4rem 0;
+
+    @include respondmax(lg){
+        padding: 0;
+    }
+
+    &-banner{
+        background:url('../../img/career-bcg.png');
+        background-size: cover;
+        border-radius: 3rem;
+        padding: 4rem;
+        background-repeat: no-repeat;
+
+        @include respondmax(lg){
+            padding: 4rem 2rem;
+        }
+    }
+
+    .section-title{
+        margin-bottom: 3.2rem;
+
+        @include respondmax(lg){
+            text-align: left;
+        }
+    }
+
+    p{
+        color: #fff;
+        width: 77rem;
+
+        @include respondmax(lg){
+            width: auto;
+            text-align: left;
+        }
+    }
+    .button{
+        margin-top: 3.2rem;
+        border: 1px solid #fff;
+
+        &:hover{
+            background-color: $primary-color;
+            color: #fff;
+            border-color: #fff!important;
+        }
+
+        @include respondmax(lg){
+            width: 100%;
+        }
+    }
+}

@@ -1,3 +1,153 @@
 .header{
-	
+	padding: 2.4rem 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    right: 0;
+
+    &-home{
+        position: relative;
+
+        .header__logo{
+            svg path{
+                fill:$primary-color;
+            }
+        }
+    }
+
+    &__logo{
+        display: inline-block;
+        margin-right: 10rem;
+        z-index: 20;
+
+        @include respondmax(lg){
+            margin-right: 0;
+        }
+
+        svg{
+
+            path{
+                fill: #fff;
+            }
+
+            &.active{
+
+                path{
+                    fill: #fff!important;
+                }
+            }
+        }
+    }
+
+    .col-lg-12{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include respondmax(lg){
+            justify-content: center;
+        }
+    }
+
+
+    &__button{
+        padding: 1.6rem 4rem;
+        background-color: #fff;
+        border-color: #fff;
+        color: $primary-color;
+
+        &:hover{
+            color: #fff;
+            background-color: $primary-color;
+            border-color: $primary-color;
+        }
+
+        @include respondmax(lg){
+            display: none;
+        }
+    }
+
+    &__mobilBtn{
+        display: none;
+
+        img{
+            object-fit: cover;
+            position: absolute;
+        }
+
+        &-light{
+            z-index: 15;
+        }
+
+        @include respondmax(lg){
+            display: inline-block;
+            position: absolute;
+            left: 1.6rem;
+            top: 2rem;
+        }
+    }
+
+    &-home{
+        position: relative;
+
+        .header__logo{
+            svg path{
+                fill:$primary-color;
+            }
+        }
+        .header__button{
+            color: #fff;
+            background-color: $primary-color;
+            border-color: $primary-color;
+        }
+        .header__mobilBtn-dark{
+            z-index: 16;
+        }
+
+    }
+
+   &.sticky{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background-color:rgba(255,255,255,.9);
+    padding: 1.5rem 0;
+    animation: moveFromTop 1s ease-in-out;
+    transform: translateY(0);
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    z-index: 2000;
+    .nav-link{
+        color: $primary-color;
+
+        &:hover{
+            color: rgba(0, 0, 0, 0.3);
+        }
+       }
+
+       @include respondmax(lg){
+        padding: .5rem 0;
+       }
+       .button{
+        color: #fff;
+        background-color: $primary-color;
+        border-color: $primary-color;
+
+        &:hover{
+            background-color: #fff;
+            border-color: $primary-color;
+            color: $primary-color;
+        }
+       }
+       .header__logo{
+        svg path{
+            fill:$primary-color;
+        }
+    }
+    
+   } 
+
+  
+   
+   
 }
